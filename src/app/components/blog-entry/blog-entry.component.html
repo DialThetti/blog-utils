@@ -1,0 +1,18 @@
+<article class="blog-entry">
+  <div class="blog-entry-title">
+    <h2>{{ title }}</h2>
+    <label>{{ date }} from {{ author }}</label>
+  </div>
+  <div class="row">
+    <div class="tags right">
+      <div *ngFor="let tag of tagList" class="chip">{{ tag }}</div>
+    </div>
+  </div>
+  <div class="blog-entry-text">
+    <slot name="preview"></slot>
+    <div class="full-text" [class.hidden]="!expanded">
+      <slot name="full"></slot>
+    </div>
+    <a (click)="expanded = !expanded">{{ expandText }}</a>
+  </div>
+</article>

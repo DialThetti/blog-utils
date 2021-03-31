@@ -1,0 +1,21 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css);
+
+:root {
+  --primary: #7a5239;
+}
+
+.full-text {
+
+  &.hidden {
+    display: none;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  cursor: pointer;
+  color: var(--primary);
+}
